@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Страница фильтрации и поиска</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <header>
+        <h1>Список книг</h1>
+        <details align="center">
+            <summary>меню</summary>
+            <fieldset width="100">
+                <p><a href="index.html">Главная</a></p>
+                <p><a href="table.html"><font color="red">Список книг</font></a></p>
+            </fieldset>
+        </details>
+        <hr>
+    </header>
+
+    <fieldset>
+        
+        <fieldset>
+            <form>
+                <legend>График</legend>
+                <p>Значение по оси OX</p>
+                <p><input type="radio" name="ox" value="Сountry"> Страна</p>
+                <p><input type="radio" name="ox" value="Genre"> Жанр</p>
+                <p><input type="radio" name="ox" value="Year"> Год</p>
+
+                <p>Значение по оси OY</p>
+                <p><input type="checkbox" name="oy" value="mincopy"> Минимальное число копий </p>
+                <p><input type="checkbox" name="oy" value="maxcopy"> Максимальное число копий </p>
+                <br>
+                <button type="button">Построить</button>
+            </form>
+        </fieldset>
+        <p>Здесь будет график</p>
+        <fieldset>
+            <form>
+                <p><label for="bookname">Название книги:</label><br>
+                <input type="text" id="bookname" name="bookname"></p>
+
+                <p><label for="author">Автор:</label><br>
+                <input type="text" id="author" name="author"></p>
+
+                <p><label for="country">Страна:</label><br>
+                <input type="text" id="country" name="country"></p>
+
+                <p><label for="year_from">Год, от:</label><br>
+                <input type="number" id="year_from" name="year_from" min="0" max="2025">
+                <br>
+                <label for="year_before">до</label><br>
+                <input type="number" id="year_before" name="year_before" min="0" max="2025"></p>
+
+                <p><label for="copy_from">Число копий (млн.), от:</label><br>
+                <input type="input" id="copy_from" name="copy_from" min="0"><br>
+                <label for="copy_before">до</label><br>
+                <input type="input" id="copy_before" name="copy_before"></p>
+
+                <p><input type="submit" value="Найти"></p>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <form>
+                <legend>Сортировка</legend>
+                <p>Первый уровень:</p>
+                <input type="radio" name="uroven1" value="Нет" checked> Нет
+                <input type="radio" name="uroven1" value="Второй уровень"> Второй уровень?<br>
+
+                <p>Второй уровень:</p>
+                <input type="radio" name="uroven2" value="Нет" checked> Нет
+                <input type="radio" name="uroven2" value="Третий уровень"> Третий уровень?<br>
+
+                <p>Третий уровень:</p>
+                <select name="uroven3">
+                    <option value="No" selected>Нет</option>
+                    <option value="bookname">Название</option>
+                    <option value="Year">Год</option>
+                    <option value="Country">Страна</option>
+                </select>
+            </form>
+        </fieldset>
+    </form>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Название книги</th>
+                <th>Жанр (жанры)</th>
+                <th>Автор</th>
+                <th>Год</th>
+                <th>Страна</th>
+                <th>Число копий по миру (в млн.)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Don Quixote</td>
+                <td>Классика, Приключения</td>
+                <td>Miguel de Cervantes</td>
+                <td>1605</td>
+                <td>Испания</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td>A Tale of Two Cities</td>
+                <td>Исторический роман</td>
+                <td>Charles Dickens</td>
+                <td>1859</td>
+                <td>Великобритания</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>The Lord of the Rings</td>
+                <td>Фэнтези</td>
+                <td>J.R.R. Tolkien</td>
+                <td>1954</td>
+                <td>Великобритания</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>Harry Potter and the Philosopher's Stone</td>
+                <td>Фэнтези, Молодежная литература</td>
+                <td>J.K. Rowling</td>
+                <td>1997</td>
+                <td>Великобритания</td>
+                <td>120</td>
+            </tr>
+            <tr>
+                <td>The Hobbit</td>
+                <td>Фэнтези</td>
+                <td>J.R.R. Tolkien</td>
+                <td>1937</td>
+                <td>Великобритания</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Twilight</td>
+                <td>Фэнтези, Роман</td>
+                <td>Stephenie Meyer</td>
+                <td>2005</td>
+                <td>США</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>And Then There Were None</td>
+                <td>Детектив</td>
+                <td>Agatha Christie</td>
+                <td>1939</td>
+                <td>Великобритания</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Dream of the Red Chamber</td>
+                <td>Классика, Роман</td>
+                <td>Cao Xueqin</td>
+                <td>1791</td>
+                <td>Китай</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>The Lion, the Witch and the Wardrobe</td>
+                <td>Фэнтези, Детская литература</td>
+                <td>C.S. Lewis</td>
+                <td>1950</td>
+                <td>Великобритания</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>The Adventures of Pinocchio</td>
+                <td>Детская литература</td>
+                <td>Carlo Collodi</td>
+                <td>1883</td>
+                <td>Италия</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>Harry Potter and the Chamber of Secrets</td>
+                <td>Фэнтези, Молодежная литература</td>
+                <td>J.K. Rowling</td>
+                <td>1998</td>
+                <td>Великобритания</td>
+                <td>77</td>
+            </tr>
+            <tr>
+                <td>The Da Vinci Code</td>
+                <td>Детектив, Триллер</td>
+                <td>Dan Brown</td>
+                <td>2003</td>
+                <td>США</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>She: A History of Adventure</td>
+                <td>Приключения, Фэнтези</td>
+                <td>H. Rider Haggard</td>
+                <td>1887</td>
+                <td>Великобритания</td>
+                <td>83</td>
+            </tr>
+            <tr>
+                <td>The Alchemist</td>
+                <td>Философия, Роман</td>
+                <td>Paulo Coelho</td>
+                <td>1988</td>
+                <td>Бразилия</td>
+                <td>65</td>
+            </tr>
+            <tr>
+                <td>The Catcher in the Rye</td>
+                <td>Роман</td>
+                <td>J.D. Salinger</td>
+                <td>1951</td>
+                <td>США</td>
+                <td>65</td>
+            </tr>
+            <tr>
+                <td>Harry Potter and the Prisoner of Azkaban</td>
+                <td>Фэнтези, Молодежная литература</td>
+                <td>J.K. Rowling</td>
+                <td>1999</td>
+                <td>Великобритания</td>
+                <td>65</td>
+            </tr>
+            <tr>
+                <td>Harry Potter and the Goblet of Fire</td>
+                <td>Фэнтези, Молодежная литература</td>
+                <td>J.K. Rowling</td>
+                <td>2000</td>
+                <td>Великобритания</td>
+                <td>65</td>
+            </tr>
+            <tr>
+                <td>Harry Potter and the Order of the Phoenix</td>
+                <td>Фэнтези, Молодежная литература</td>
+                <td>J.K. Rowling</td>
+                <td>2003</td>
+                <td>Великобритания</td>
+                <td>65</td>
+            </tr>
+            <tr>
+                <td>Harry Potter and the Half-Blood Prince</td>
+                <td>Фэнтези, Молодежная литература</td>
+                <td>J.K. Rowling</td>
+                <td>2005</td>
+                <td>Великобритания</td>
+                <td>65</td>
+            </tr>
+            <tr>
+                <td>Harry Potter and the Deathly Hallows</td>
+                <td>Фэнтези, Молодежная литература</td>
+                <td>J.K. Rowling</td>
+                <td>2007</td>
+                <td>Великобритания</td>
+                <td>65</td>
+            </tr>
+            <tr>
+                <td>The Bridges of Madison County</td>
+                <td>Роман</td>
+                <td>Robert James Waller</td>
+                <td>1992</td>
+                <td>США</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>One Hundred Years of Solitude</td>
+                <td>Магический реализм</td>
+                <td>Gabriel García Márquez</td>
+                <td>1967</td>
+                <td>Колумбия</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Lolita</td>
+                <td>Роман</td>
+                <td>Vladimir Nabokov</td>
+                <td>1955</td>
+                <td>США</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Anne of Green Gables</td>
+                <td>Детская литература</td>
+                <td>L.M. Montgomery</td>
+                <td>1908</td>
+                <td>Канада</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Black Beauty</td>
+                <td>Детская литература</td>
+                <td>Anna Sewell</td>
+                <td>1877</td>
+                <td>Великобритания</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Charlotte's Web</td>
+                <td>Детская литература</td>
+                <td>E.B. White</td>
+                <td>1952</td>
+                <td>США</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>The Very Hungry Caterpillar</td>
+                <td>Детская литература</td>
+                <td>Eric Carle</td>
+                <td>1969</td>
+                <td>США</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>The Tale of Peter Rabbit</td>
+                <td>Детская литература</td>
+                <td>Beatrix Potter</td>
+                <td>1902</td>
+                <td>Великобритания</td>
+                <td>45</td>
+            </tr>
+            <tr>
+                <td>To Kill a Mockingbird</td>
+                <td>Роман</td>
+                <td>Harper Lee</td>
+                <td>1960</td>
+                <td>США</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>Angels & Demons</td>
+                <td>Детектив, Триллер</td>
+                <td>Dan Brown</td>
+                <td>2000</td>
+                <td>США</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>War and Peace</td>
+                <td>Исторический роман</td>
+                <td>Leo Tolstoy</td>
+                <td>1869</td>
+                <td>Россия</td>
+                <td>36</td>
+            </tr>
+            <tr>
+                <td>The Kite Runner</td>
+                <td>Роман</td>
+                <td>Khaled Hosseini</td>
+                <td>2003</td>
+                <td>Афганистан/США</td>
+                <td>31</td>
+            </tr>
+            <tr>
+                <td>1984</td>
+                <td>Антиутопия, Научная фантастика</td>
+                <td>George Orwell</td>
+                <td>1949</td>
+                <td>Великобритания</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>The Fault in Our Stars</td>
+                <td>Роман, Молодежная литература</td>
+                <td>John Green</td>
+                <td>2012</td>
+                <td>США</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>The Girl on the Train</td>
+                <td>Триллер</td>
+                <td>Paula Hawkins</td>
+                <td>2015</td>
+                <td>Великобритания</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Life of Pi</td>
+                <td>Приключения, Философия</td>
+                <td>Yann Martel</td>
+                <td>2001</td>
+                <td>Канада</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Pride and Prejudice</td>
+                <td>Роман</td>
+                <td>Jane Austen</td>
+                <td>1813</td>
+                <td>Великобритания</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>The Great Gatsby</td>
+                <td>Роман</td>
+                <td>F. Scott Fitzgerald</td>
+                <td>1925</td>
+                <td>США</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Jane Eyre</td>
+                <td>Роман</td>
+                <td>Charlotte Brontë</td>
+                <td>1847</td>
+                <td>Великобритания</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Wuthering Heights</td>
+                <td>Роман</td>
+                <td>Emily Brontë</td>
+                <td>1847</td>
+                <td>Великобритания</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Crime and Punishment</td>
+                <td>Роман</td>
+                <td>Fyodor Dostoevsky</td>
+                <td>1866</td>
+                <td>Россия</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Animal Farm</td>
+                <td>Сатира, Аллегория</td>
+                <td>George Orwell</td>
+                <td>1945</td>
+                <td>Великобритания</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>The Brothers Karamazov</td>
+                <td>Роман</td>
+                <td>Fyodor Dostoevsky</td>
+                <td>1880</td>
+                <td>Россия</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Les Misérables</td>
+                <td>Исторический роман</td>
+                <td>Victor Hugo</td>
+                <td>1862</td>
+                <td>Франция</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>The Count of Monte Cristo</td>
+                <td>Приключения</td>
+                <td>Alexandre Dumas</td>
+                <td>1844</td>
+                <td>Франция</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Brave New World</td>
+                <td>Антиутопия, Научная фантастика</td>
+                <td>Aldous Huxley</td>
+                <td>1932</td>
+                <td>Великобритания</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>The Picture of Dorian Gray</td>
+                <td>Роман</td>
+                <td>Oscar Wilde</td>
+                <td>1890</td>
+                <td>Великобритания</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>The Old Man and the Sea</td>
+                <td>Роман</td>
+                <td>Ernest Hemingway</td>
+                <td>1952</td>
+                <td>США</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Frankenstein</td>
+                <td>Готика, Научная фантастика</td>
+                <td>Mary Shelley</td>
+                <td>1818</td>
+                <td>Великобритания</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Dracula</td>
+                <td>Готика, Ужасы</td>
+                <td>Bram Stoker</td>
+                <td>1897</td>
+                <td>Ирландия</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>The Little Prince</td>
+                <td>Детская литература, Философия</td>
+                <td>Antoine de Saint-Exupéry</td>
+                <td>1943</td>
+                <td>Франция</td>
+                <td>200</td>
+            </tr>
+        </tbody>
+    </table>
+    <footer>
+        <hr>
+        <section align="center">
+            <p>Максим Привалов</p>
+            <p>Группа: Б9123-09.03.04 / 2</p>
+        </section>
+    </footer>
+</body>
+</html>
